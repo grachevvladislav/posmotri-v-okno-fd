@@ -16,6 +16,245 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  display: flex;
+  padding: 133px 30px;
+  gap: 30px;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.result {
+
+}
+
+.result__video-container {
+  height: 386px;
+  width: 711px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.result__video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 54px;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.search-form__fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.search-form__fieldset-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.search-form__label {
+  display: flex;
+  align-items: stretch;
+  gap: 5px;
+  cursor: pointer
+}
+
+.search-form__label:hover {
+  text-decoration-line: underline;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 4px;
+}
+
+.search-form__textfield {
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #FFFFFF;
+  background: transparent;
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  appearance: none;
+  width: 225px;
+  padding: 2px 0;
+}
+
+.search-form__textfield::placeholder {
+  color: rgb(255 255 255 / 0.7);
+}
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  opacity: 1;
+}
+
+.search-form__pseudo-checkbox {
+  border: 1px solid #FFFFFF;
+  height: 19px;
+  width: 19px;
+  padding: 1px;
+}
+
+.search-form__pseudo-checkbox::after {
+  content: "";
+  display: block;
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.button {
+  border: 1px solid #FFFFFF;
+  background: transparent;
+  color: #FFFFFF;
+  min-height: 34px;
+  align-self: end;
+  font-family: 'Fira Sans Condensed', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.button:hover {
+  text-decoration-line: underline;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.search-form__submit-button {
+  width: 194px;
+}
+
+.content__details {
+  width: 399px;
+}
+
+.title {
+  font-family: 'Oswald', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__list-container {
+  height: 298px;
+  overflow: hidden auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.content__list-item {
+  padding: 0 3px;
+}
+
+.content__video-card {
+  display: flex;
+  height: 103px;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.content__video-card-title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  flex: 0 0 auto;
+  font-style: normal;
+  font-family: 'Oswald', serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  max-height: 64px;
+  flex: 1 1 auto;
+  margin-top: 6px;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16px;
+}
+
+.content__card-link {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #FFFFFF;
+}
+
+.content__video-card-thumbnail {
+  object-fit: cover;
+  height: 103px;
+  min-width: 194px;
+}
+
+.more-button {
+  width: 100%;
 }
 
 h1,
@@ -37,7 +276,6 @@ ol {
   list-style: none;
 }
 
-/* Кастомный скроллбар */
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
 }
@@ -48,4 +286,14 @@ ol {
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
